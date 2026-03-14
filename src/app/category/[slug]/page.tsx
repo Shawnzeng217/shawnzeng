@@ -20,13 +20,13 @@ export default async function Category(props: { params: Promise<{ slug: string }
 
   return (
     <div className="flex flex-col gap-12">
-      <h1 className="text-3xl font-bold border-b pb-4 uppercase tracking-widest text-gray-500">
+      <h1 className="text-3xl font-bold border-b pb-4 uppercase tracking-widest text-gray-500 mb-8">
         Category: <span className="text-black">{params.slug}</span>
       </h1>
-      <div className="flex flex-col gap-16">
+      <div className="flex flex-col gap-0">
         {categoryPosts.length > 0 ? (
           categoryPosts.map(({ id, date, title, category, author, excerpt }) => (
-            <article key={id} className="border-b pb-12 flex flex-col gap-4">
+            <article key={id} className="border-b py-16 flex flex-col gap-4 first:pt-0">
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gray-400">
                 <time dateTime={date}>{format(new Date(date), "MMMM d, yyyy")}</time>
                 <span>&bull;</span>
