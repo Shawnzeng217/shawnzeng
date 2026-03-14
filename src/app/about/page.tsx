@@ -14,7 +14,7 @@ export default async function About() {
 
   return (
     <article className="flex flex-col gap-8 overflow-hidden">
-      <h1 className="text-4xl md:text-5xl font-bold leading-tight">{pageData.title}</h1>
+      <h1 className="text-3xl md:text-4xl font-bold leading-tight">{pageData.title}</h1>
       <MarkdownContent html={pageData.contentHtml} />
     </article>
   );

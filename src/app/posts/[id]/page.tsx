@@ -28,7 +28,7 @@ export default async function Post(props: { params: Promise<{ id: string }> }) {
             {postData.category}
           </Link>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight">{postData.title}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold leading-tight">{postData.title}</h1>
       </header>
       <MarkdownContent html={postData.contentHtml} />
     </article>

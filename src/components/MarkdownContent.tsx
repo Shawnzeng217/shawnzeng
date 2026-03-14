@@ -39,7 +39,7 @@ export default function MarkdownContent({ html }: { html: string }) {
   return (
     <div
       ref={containerRef}
-      className="prose prose-lg prose-slate max-w-none prose-pre:bg-gray-900 prose-pre:text-gray-100"
+      className="prose prose-slate max-w-none prose-pre:bg-gray-900 prose-pre:text-gray-100"
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );

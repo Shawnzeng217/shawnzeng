@@ -18,7 +18,7 @@ export default async function Home() {
               {category}
             </Link>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight hover:opacity-80 transition-opacity">
+          <h2 className="text-2xl md:text-3xl font-bold leading-tight hover:opacity-80 transition-opacity">
             <Link href={`/posts/${id}`}>{title}</Link>
           </h2>
           <p className="text-gray-600 leading-relaxed italic">{excerpt}</p>
