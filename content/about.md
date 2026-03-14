@@ -6,4 +6,4 @@ Shawn Zeng is currently part of the **Digital Analytics Team at Hilton APAC Head
 
 He is a writer and curator of ideas, focusing on the intersection of technology, culture, and personal growth. He holds an undergraduate degree from the **Marriott Program** at **TUC-FIU** (a joint program between **Tianjin University of Commerce** and **Florida International University**). He also graduated from **East China Normal University** with a degree in **Library and Information Science**, a background that fuels his passion for organizing information and uncovering hidden insights.
 
-His writings have appeared in various publications, and he continues to share his insights on his personal blog and newsletter. You can find him exploring the latest in digital trends and personal development.
+He continues to share his insights on his personal blog and newsletter. You can find him exploring the latest in digital trends and personal development.
