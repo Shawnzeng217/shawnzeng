@@ -6,11 +6,26 @@ import html from 'remark-html';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
+function getAllFiles(dirPath: string, arrayOfFiles: string[] = []) {
+  const files = fs.readdirSync(dirPath);
+
+  files.forEach((file) => {
+    if (fs.statSync(dirPath + "/" + file).isDirectory()) {
+      arrayOfFiles = getAllFiles(dirPath + "/" + file, arrayOfFiles);
+    } else {
+      arrayOfFiles.push(path.join(dirPath, "/", file));
+    }
+  });
+
+  return arrayOfFiles;
+}
+
 export async function getSortedPostsData() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = await Promise.all(fileNames.map(async (fileName) => {
-    const id = fileName.replace(/\.md$/, '');
-    const fullPath = path.join(postsDirectory, fileName);
+  const allFiles = getAllFiles(postsDirectory);
+  const markdownFiles = allFiles.filter(file => file.endsWith('.md'));
+
+  const allPostsData = await Promise.all(markdownFiles.map(async (fullPath) => {
+    const id = path.basename(fullPath).replace(/\.md$/, '');
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
 
@@ -24,7 +39,13 @@ export async function getSortedPostsData() {
 }
 
 export async function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
+  const allFiles = getAllFiles(postsDirectory);
+  const fullPath = allFiles.find(file => path.basename(file) === `${id}.md`);
+
+  if (!fullPath) {
+    throw new Error(`Post with id ${id} not found`);
+  }
+
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
   const processedContent = await remark().use(html).process(matterResult.content);
@@ -36,3 +57,4 @@ export async function getPostData(id: string) {
     ...(matterResult.data as { date: string; title: string; category: string; author: string }),
   };
 }
+
