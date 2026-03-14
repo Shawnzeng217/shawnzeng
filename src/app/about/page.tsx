@@ -2,14 +2,14 @@ import { getPageData } from "@/lib/posts";
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const pageData = await getPageData("about");
+  const pageData = await getPageData("Shawn");
   return {
     title: `${pageData.title} | Shawn Zeng`,
   };
 }
 
 export default async function About() {
-  const pageData = await getPageData("about");
+  const pageData = await getPageData("Shawn");
 
   return (
     <article className="flex flex-col gap-8">
