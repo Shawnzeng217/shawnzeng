@@ -12,8 +12,8 @@ export async function getPageData(slug: string) {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
   
-  // Remove leading H1 if it exists to avoid duplicate titles
-  const cleanContent = matterResult.content.replace(/^#\s+.+\n?/, "");
+  // Remove leading H1 if it exists to avoid duplicate titles (robust version)
+  const cleanContent = matterResult.content.replace(/^\s*#\s+.+\n*/, "");
   
   const processedContent = await remark().use(html).process(cleanContent);
   const contentHtml = processedContent.toString();
@@ -78,8 +78,8 @@ export async function getPostData(id: string) {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
 
-  // Remove leading H1 if it exists to avoid duplicate titles
-  const cleanContent = matterResult.content.replace(/^#\s+.+\n?/, "");
+  // Remove leading H1 if it exists to avoid duplicate titles (robust version)
+  const cleanContent = matterResult.content.replace(/^\s*#\s+.+\n*/, "");
 
   const processedContent = await remark().use(html).process(cleanContent);
   const contentHtml = processedContent.toString();
