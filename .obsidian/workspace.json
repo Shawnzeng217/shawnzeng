@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "templates/obsidian-blog-post.md",
+                "file": "posts/Tech/personal-knowledge-system-ai-automation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "obsidian-blog-post"
+              "title": "personal-knowledge-system-ai-automation"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "templates/obsidian-blog-post.md",
+                "file": "posts/Tech/personal-knowledge-system-ai-automation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "obsidian-blog-post 的反向链接列表"
+              "title": "personal-knowledge-system-ai-automation 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "templates/obsidian-blog-post.md",
+                "file": "posts/Tech/personal-knowledge-system-ai-automation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "obsidian-blog-post 的出链列表"
+              "title": "personal-knowledge-system-ai-automation 的出链列表"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "templates/obsidian-blog-post.md",
+                "file": "posts/Tech/personal-knowledge-system-ai-automation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "obsidian-blog-post 的大纲"
+              "title": "personal-knowledge-system-ai-automation 的大纲"
             }
           }
         ]
@@ -187,16 +187,16 @@
   },
   "active": "adf991bc42ae19fb",
   "lastOpenFiles": [
+    "posts/AI/cloudflare-crawl-web-content.md",
+    "templates/obsidian-blog-post.md",
     "src/components/MarkdownContent.tsx",
     "skills/shawnzeng-blog-writer/SKILL.md",
     "skills/shawnzeng-blog-writer",
     "skills",
-    "posts/AI/cloudflare-crawl-web-content.md",
     "posts/Tech/personal-knowledge-system-ai-automation.md",
     "posts/AI/Cloudflare crawl-web-content.md",
     "content/about.md",
     "posts/AI/Cloudflare.md",
-    "templates/obsidian-blog-post.md",
     "未命名.base",
     "未命名 1.base",
     "posts/Ideas/to-learn-anything-first-unlearn-school.md",
@@ -207,7 +207,6 @@
     "posts/Ideas",
     "posts/Hilton",
     "posts/Tech",
-    "posts/AI",
     "public/vercel.svg",
     "public/window.svg",
     "public/next.svg",

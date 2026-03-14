@@ -5,9 +5,6 @@ category: "AI"
 author: "Shawn Zeng"
 excerpt: "A deep dive into Cloudflare's Browser Rendering /crawl endpoint—a game-changer for AI content ingestion and large-scale web automation. | 深入探讨 Cloudflare Browser Rendering /crawl 端点：大模型内容获取与大规模网页自动化的利器。"
 ---
-
-# Cloudflare Crawl web content: Scaling Web Intelligence
-
 ## 1. Definition / 定义
 
 **English:**
