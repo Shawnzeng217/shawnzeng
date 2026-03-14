@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   --background: #ffffff;
@@ -17,12 +18,44 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-.prose h1, .prose h2, .prose h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+/* Ensure consistent fonts inside prose */
+.prose {
+  font-family: var(--font-inter), sans-serif;
+  max-width: 100%;
 }
 
-.prose p {
-  margin-bottom: 1rem;
-  line-height: 1.75;
+.prose h1, .prose h2, .prose h3 {
+  font-family: var(--font-playfair), serif;
+  color: #000;
+}
+
+/* Custom separator style */
+.prose hr {
+  margin: 3rem 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Code block container for copy button */
+.code-block-wrapper {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.copy-button:hover {
+  opacity: 1;
+  background: #e5e7eb;
 }

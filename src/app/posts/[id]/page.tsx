@@ -2,6 +2,7 @@ import { getPostData, getSortedPostsData } from "@/lib/posts";
 import { format } from "date-fns";
 import Link from "next/link";
 import { Metadata } from "next";
+import MarkdownContent from "@/components/MarkdownContent";
 
 export async function generateMetadata(props: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const params = await props.params;
@@ -16,7 +17,7 @@ export default async function Post(props: { params: Promise<{ id: string }> }) {
   const postData = await getPostData(params.id);
 
   return (
-    <article className="flex flex-col gap-8">
+    <article className="flex flex-col gap-8 overflow-hidden">
       <header className="flex flex-col gap-4">
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gray-400">
           <time dateTime={postData.date}>{format(new Date(postData.date), "MMMM d, yyyy")}</time>
@@ -29,10 +30,7 @@ export default async function Post(props: { params: Promise<{ id: string }> }) {
         </div>
         <h1 className="text-4xl md:text-5xl font-bold leading-tight">{postData.title}</h1>
       </header>
-      <div
-        className="prose prose-lg max-w-none text-gray-700"
-        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-      />
+      <MarkdownContent html={postData.contentHtml} />
     </article>
   );
 }

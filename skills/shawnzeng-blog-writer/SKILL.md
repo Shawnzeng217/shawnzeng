@@ -38,7 +38,8 @@ excerpt: "A bilingual summary (1-2 sentences in EN/CN) for the list view."
 ## 4. Technical Constraints
 - **No Duplicate Titles**: Do NOT include a `# H1` in the body if it's already in the frontmatter. The system strips the first H1 automatically.
 - **Image Support**: Use standard Markdown syntax `![Alt](path)`.
-- **Code Blocks**: Always specify the language for syntax highlighting (e.g., ` ```bash `).
+- **Code & Prompts**: All code snippets, CLI commands, and AI Prompts MUST be wrapped in triple backtick code blocks (e.g., \` ```bash \` or \` ```text \`). This ensures they are rendered with a "Copy" button for the user.
+- **Horizontal Rules**: Use `---` for section separators. The system is styled to provide consistent vertical spacing around them.
 
 ## 5. Deployment Workflow
 After writing, ensure the file is committed and pushed to GitHub. Vercel will handle the rest.

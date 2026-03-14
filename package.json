@@ -16,7 +16,8 @@
     "gray-matter": "^4.0.3",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
-    "date-fns": "^4.1.0"
+    "date-fns": "^4.1.0",
+    "@tailwindcss/typography": "^0.5.16"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

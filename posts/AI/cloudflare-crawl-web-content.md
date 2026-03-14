@@ -62,6 +62,8 @@ curl -X GET "https://api.cloudflare.com/client/v4/accounts/<ACCOUNT_ID>/browser-
      -H "Authorization: Bearer <TOKEN>"
 ```
 
+---
+
 ## 4. Using with Large Language Models (LLMs) / 通过大模型使用
 
 ### How to Prompt an LLM / 如何引导大模型
@@ -71,7 +73,11 @@ To use this tool effectively with an AI agent (like ChatGPT, Claude, or Gemini C
 为了在 AI 智能体（如 ChatGPT、Claude 或 Gemini CLI）中高效使用此工具，你应该提供清晰的指令和必要的凭据。
 
 **Prompt Example / Prompt 示例:**
-> "I want to crawl the content of `https://example.com` using Cloudflare's Browser Rendering API. Here is my Cloudflare Account ID: `<YOUR_ID>` and my API Token: `<YOUR_TOKEN>`. Please initiate the crawl, poll for the results, and save the output as a Markdown file."
+```text
+I want to crawl the content of https://example.com using Cloudflare's Browser Rendering API. 
+Here is my Cloudflare Account ID: <YOUR_ID> and my API Token: <YOUR_TOKEN>. 
+Please initiate the crawl, poll for the results, and save the output as a Markdown file.
+```
 
 ### Essential Configuration / 核心配置要点
 **English:**
