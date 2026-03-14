@@ -23,7 +23,7 @@ export default async function Post(props: { params: Promise<{ id: string }> }) {
           <span>&bull;</span>
           <span>{postData.author}</span>
           <span>&bull;</span>
-          <Link href={`/category/${postData.category.toLowerCase()}`} className="hover:text-black transition-colors">
+          <Link href={`/category/${postData.category.toLowerCase()}`} className="text-[--classical-gold] hover:underline transition-all">
             {postData.category}
           </Link>
         </div>

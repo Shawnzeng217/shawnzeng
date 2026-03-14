@@ -16,14 +16,14 @@ export default function Header() {
         Shawn Zeng
       </Link>
       <nav className="flex flex-wrap justify-center gap-6">
-        <Link href="/" className="text-sm font-semibold uppercase tracking-widest text-gray-600 hover:text-black transition-colors">
+        <Link href="/" className="text-sm font-semibold uppercase tracking-widest text-gray-600 hover:text-[--classical-gold] transition-colors">
           Home
         </Link>
         {categories.map((cat) => (
           <Link
             key={cat.path}
             href={cat.path}
-            className="text-sm font-semibold uppercase tracking-widest text-gray-600 hover:text-black transition-colors"
+            className="text-sm font-semibold uppercase tracking-widest text-gray-600 hover:text-[--classical-gold] transition-colors"
           >
             {cat.name}
           </Link>

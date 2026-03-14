@@ -21,7 +21,7 @@ export default async function Category(props: { params: Promise<{ slug: string }
   return (
     <div className="flex flex-col gap-12">
       <h1 className="text-3xl font-bold border-b pb-4 uppercase tracking-widest text-gray-500 mb-8">
-        Category: <span className="text-black">{params.slug}</span>
+        Category: <span className="text-[--classical-gold]">{params.slug}</span>
       </h1>
       <div className="flex flex-col gap-0">
         {categoryPosts.length > 0 ? (

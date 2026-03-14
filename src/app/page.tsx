@@ -14,7 +14,7 @@ export default async function Home() {
             <span>&bull;</span>
             <span>{author}</span>
             <span>&bull;</span>
-            <Link href={`/category/${category.toLowerCase()}`} className="hover:text-black transition-colors">
+            <Link href={`/category/${category.toLowerCase()}`} className="text-[--classical-gold] hover:underline transition-all">
               {category}
             </Link>
           </div>
