@@ -1,6 +1,15 @@
 import { getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
 import { format } from "date-fns";
+import { Metadata } from "next";
+
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const params = await props.params;
+  const categoryName = params.slug.charAt(0).toUpperCase() + params.slug.slice(1);
+  return {
+    title: `${categoryName} | Shawn Zeng`,
+  };
+}
 
 export default async function Category(props: { params: Promise<{ slug: string }> }) {
   const params = await props.params;

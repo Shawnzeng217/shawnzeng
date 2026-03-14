@@ -1,6 +1,15 @@
 import { getPostData, getSortedPostsData } from "@/lib/posts";
 import { format } from "date-fns";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export async function generateMetadata(props: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const params = await props.params;
+  const postData = await getPostData(params.id);
+  return {
+    title: `${postData.title} | Shawn Zeng`,
+  };
+}
 
 export default async function Post(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
