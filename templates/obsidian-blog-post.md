@@ -1,11 +1,11 @@
 ---
-title: "{{title}}"
-date: "{{date}}"
-category: "Uncategorized"
+title: "<% tp.file.title %>"
+date: "<% tp.date.now("YYYY-MM-DD") %>"
+category: "<% tp.file.folder(false) %>"
 author: "Shawn Zeng"
-excerpt: "Enter a brief summary for the list view here..."
+excerpt: "..."
 ---
 
-# {{title}}
+# <% tp.file.title %>
 
-Write your content here...
+开始在 <% tp.file.folder(false) %> 分类下的创作...
