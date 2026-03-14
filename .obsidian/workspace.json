@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/Other Writings/to-learn-anything-first-unlearn-school.md",
+                "file": "posts/Ideas/to-learn-anything-first-unlearn-school.md",
                 "mode": "source",
                 "source": false
               },
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/Other Writings/to-learn-anything-first-unlearn-school.md",
+                "file": "posts/Ideas/to-learn-anything-first-unlearn-school.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/Other Writings/to-learn-anything-first-unlearn-school.md",
+                "file": "posts/Ideas/to-learn-anything-first-unlearn-school.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/Other Writings/to-learn-anything-first-unlearn-school.md",
+                "file": "posts/Ideas/to-learn-anything-first-unlearn-school.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -193,7 +193,7 @@
     "posts/Hilton",
     "posts/Tech",
     "posts/AI",
-    "posts/Other Writings/to-learn-anything-first-unlearn-school.md",
+    "posts/Ideas/to-learn-anything-first-unlearn-school.md",
     "public/vercel.svg",
     "public/window.svg",
     "public/next.svg",
