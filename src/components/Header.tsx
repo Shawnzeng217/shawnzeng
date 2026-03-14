@@ -2,10 +2,10 @@ import Link from "next/link";
 
 const categories = [
   { name: "About Shawn", path: "/about" },
-  { name: "China", path: "/category/china" },
-  { name: "Food", path: "/category/food" },
-  { name: "Harvard", path: "/category/harvard" },
+  { name: "AI", path: "/category/ai" },
   { name: "Tech", path: "/category/tech" },
+  { name: "Hilton", path: "/category/hilton" },
+  { name: "Ideas", path: "/category/ideas" },
   { name: "Other Writings", path: "/writing-profiles" },
 ];
 
