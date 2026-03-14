@@ -1,6 +1,6 @@
 ---
 title: "From Second Brain to Static Site: The Obsidian-GitHub-Vercel Workflow"
-date: "2026-03-12"
+date: "2026-03-15"
 category: "Tech"
 author: "Shawn Zeng"
 excerpt: "How I built a seamless, AI-powered publishing pipeline that turns personal Obsidian notes into a professional-grade website automatically. | 深度解析：如何利用 AI 自动化构建一套从 Obsidian 笔记到全球发布的高效工作流。"

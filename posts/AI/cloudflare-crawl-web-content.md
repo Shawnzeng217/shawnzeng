@@ -1,6 +1,6 @@
 ---
 title: "Cloudflare Crawl web content: Simplifying Web Intelligence"
-date: "2026-03-12"
+date: "2026-03-15"
 category: "AI"
 author: "Shawn Zeng"
 excerpt: "A deep dive into Cloudflare's Browser Rendering /crawl endpoint—a game-changer for AI content ingestion and large-scale web automation. | 深入探讨 Cloudflare Browser Rendering /crawl 端点：大模型内容获取与大规模网页自动化的利器。"
