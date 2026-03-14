@@ -29,9 +29,19 @@ export async function getSortedPostsData() {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
 
+    // Get the immediate parent folder name
+    const relativePath = path.relative(postsDirectory, fullPath);
+    const pathParts = relativePath.split(path.sep);
+    
+    // If the file is in a subdirectory, use that folder name as category
+    // Otherwise, use the category from frontmatter or 'Uncategorized'
+    const folderCategory = pathParts.length > 1 ? pathParts[0] : null;
+    const category = folderCategory || matterResult.data.category || 'Uncategorized';
+
     return {
       id,
-      ...(matterResult.data as { date: string; title: string; category: string; excerpt: string; author: string }),
+      ...(matterResult.data as { date: string; title: string; excerpt: string; author: string }),
+      category,
     };
   }));
 
@@ -51,10 +61,17 @@ export async function getPostData(id: string) {
   const processedContent = await remark().use(html).process(matterResult.content);
   const contentHtml = processedContent.toString();
 
+  // Get the immediate parent folder name
+  const relativePath = path.relative(postsDirectory, fullPath);
+  const pathParts = relativePath.split(path.sep);
+  const folderCategory = pathParts.length > 1 ? pathParts[0] : null;
+  const category = folderCategory || matterResult.data.category || 'Uncategorized';
+
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string; category: string; author: string }),
+    ...(matterResult.data as { date: string; title: string; author: string }),
+    category,
   };
 }
 
