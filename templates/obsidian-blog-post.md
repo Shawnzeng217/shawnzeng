@@ -6,6 +6,4 @@ author: "Shawn Zeng"
 excerpt: "..."
 ---
 
-# <% tp.file.title %>
-
 开始在 <% tp.file.folder(false) %> 分类下的创作...

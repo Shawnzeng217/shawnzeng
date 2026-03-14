@@ -11,7 +11,11 @@ export async function getPageData(slug: string) {
   const fullPath = path.join(contentDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
-  const processedContent = await remark().use(html).process(matterResult.content);
+  
+  // Remove leading H1 if it exists to avoid duplicate titles
+  const cleanContent = matterResult.content.replace(/^#\s+.+\n?/, "");
+  
+  const processedContent = await remark().use(html).process(cleanContent);
   const contentHtml = processedContent.toString();
 
   return {
@@ -73,7 +77,11 @@ export async function getPostData(id: string) {
 
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
-  const processedContent = await remark().use(html).process(matterResult.content);
+
+  // Remove leading H1 if it exists to avoid duplicate titles
+  const cleanContent = matterResult.content.replace(/^#\s+.+\n?/, "");
+
+  const processedContent = await remark().use(html).process(cleanContent);
   const contentHtml = processedContent.toString();
 
   // Get the immediate parent folder name
