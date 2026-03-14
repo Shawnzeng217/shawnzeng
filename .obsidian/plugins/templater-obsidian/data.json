@@ -1,0 +1,54 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "posts",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "posts/AI",
+      "template": "templates/obsidian-blog-post.md"
+    },
+    {
+      "folder": "posts/Tech",
+      "template": "templates/obsidian-blog-post.md"
+    },
+    {
+      "folder": "posts/Hilton",
+      "template": "templates/obsidian-blog-post.md"
+    },
+    {
+      "folder": "posts/Ideas",
+      "template": "templates/obsidian-blog-post.md"
+    },
+    {
+      "folder": "posts/Other Writings",
+      "template": "templates/obsidian-blog-post.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    ""
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "intellisense_render": 1
+}
